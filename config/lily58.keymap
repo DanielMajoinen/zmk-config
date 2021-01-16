@@ -43,8 +43,8 @@
 &kp GRAVE &bt BT_SEL 0     &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                 &trans    &trans    &trans    &trans    &trans    &trans
 &trans    &trans           &kp UP       &trans       &kp F5       &trans                       &trans    &trans    &trans    &trans    &trans    &kp PIPE
 &trans    &kp LEFT         &kp DOWN     &kp RIGHT    &trans       &trans                       &trans    &trans    &trans    &trans    &trans    &kp TILDE
-&trans    &ext_power EP_ON &trans       &trans       &out OUT_BLE &trans    &trans   &trans    &trans    &trans    &trans    &trans    &trans    &trans
-                                        &trans       &trans       &trans    &trans   &trans    &trans    &trans    &trans
+&trans    &ext_power EP_ON &trans       &trans       &out OUT_USB &out OUT_BLE &trans   &trans    &trans    &trans    &trans    &trans    &trans    &trans
+                                        &trans       &trans       &trans       &trans   &trans    &trans    &trans    &trans
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

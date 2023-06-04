@@ -7,7 +7,7 @@ jobs:
     # uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main # TODO: Use once display power management is fixed
     runs-on: ubuntu-latest
     container:
-      image: zmkfirmware/zmk-build-arm:2.5
+      image: zmkfirmware/zmk-build-arm:2.4
     name: Build
     steps:
       - name: Checkout

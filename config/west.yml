@@ -2,12 +2,12 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: zmkfirmware-infused-kim
-      url-base: https://github.com/infused-kim
+    - name: DanielMajoinen
+      url-base: https://github.com/DanielMajoinen
   projects:
     - name: zmk
-      remote: zmkfirmware-infused-kim
-      revision: main
+      remote: DanielMajoinen
+      revision: fix-oled
       import: app/west.yml
   self:
     path: config

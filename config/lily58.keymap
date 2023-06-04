@@ -39,16 +39,16 @@
 		lower_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |  `  |  BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   | BTCLR | BTLDR |       |      |  =   |  DEL  |
-// |     | HOME |  ^  |  END |      |      |                   |       |       |       |      |      |   |   |
+// |     | LA<- |  ^  | LA-> |      |      |                   |       |       |       |      |      |   |   |
 // |     |  <-  |  v  |  ->  |      |      |                   |       |       |       |      |      |   ~   |
 // |     |      |     |      |  USB |  BLE | EP_ON |  | EP_OFF |       |       |       |      |      |       |
 //                    |      |      |      |       |  |        |       |       |       |
 			bindings = <
-&kp GRAVE          &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                 &bt BT_CLR &bootloader &trans    &trans    &kp EQUAL &kp DEL
-&kp C_AL_NEXT_TASK &kp HOME     &kp UP       &kp END      &kp F5       &trans                       &trans     &trans      &trans    &trans    &trans    &kp PIPE
-&trans             &kp LEFT     &kp DOWN     &kp RIGHT    &trans       &trans                       &trans     &trans      &trans    &trans    &trans    &kp TILDE
-&trans             &trans       &trans       &trans       &out OUT_USB &out OUT_BLE &ext_power EP_ON   &ext_power EP_OFF &trans     &trans      &trans    &trans    &trans    &trans
-                                    &trans   &trans       &trans       &trans   &trans &trans     &trans      &trans
+&kp GRAVE          &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3 &bt BT_SEL 4                 &bt BT_CLR &bootloader &trans    &trans    &kp EQUAL &kp DEL
+&trans             &kp LA(LEFT)  &kp UP       &kp LA(RIGHT) &kp F5       &trans                       &trans     &trans      &trans    &trans    &trans    &kp PIPE
+&trans             &kp LEFT      &kp DOWN     &kp RIGHT     &trans       &trans                       &trans     &trans      &trans    &trans    &trans    &kp TILDE
+&trans             &trans        &trans       &trans        &out OUT_USB &out OUT_BLE &ext_power EP_ON   &ext_power EP_OFF &trans     &trans      &trans    &trans    &trans    &trans
+                                     &trans   &trans        &trans       &trans   &trans &trans     &trans      &trans
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

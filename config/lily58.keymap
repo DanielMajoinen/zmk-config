@@ -19,12 +19,6 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // -------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6    |  7    |  8    |  9   |   0   |  BSPC |
-            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y    |  U    |  I    |  O   |   P   |   -   |
-            // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H    |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N    |  M    |  ,    |  .   |   /   | SHIFT |
-            //                     | ALT  | WIN  | LOWER|  SPACE |  | SPACE | ENTER | RAISE | WIN   |
 
             bindings = <
 &kp ESC    &kp N1  &kp N2  &kp N3    &kp N4     &kp N5                                 &kp N6         &kp N7    &kp N8     &kp N9   &kp N0    &kp BSPC
@@ -36,12 +30,6 @@
         };
 
         lower_layer {
-            // -----------------------------------------------------------------------------------------------------------
-            // |  `  |  BT1 | BT2 |  BT3 |  BT4 | BT5 |                    | BTCLR |       |       |      |   =  |  DEL  |
-            // |     | LA<- |  ^  | LA-> |      |     |                    |       |       |       |      |      |   |   |
-            // |     |  <-  |  v  |  ->  |  F5  |     |                    |       |       |       |      |      |   ~   |
-            // |     |      |     |      |  USB | BLE | EP_ON  |  | EP_OFF |       |       |       |      |      |       |
-            //                    |      |      |     | EP_TOG |  |        |       |       |       |
 
             bindings = <
 &kp GRAVE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4                               &bt BT_CLR  &trans  &trans  &trans  &kp EQUAL  &kp DEL
@@ -53,12 +41,6 @@
         };
 
         raise_layer {
-            // ------------------------------------------------------------------------------------------------------------
-            // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
-            // |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   ^   |  v   |  ->   |       |
-            // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |      |   \   |   \   |
-            //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
 &trans  &trans  &trans  &trans   &trans   &trans                     &trans  &trans  &trans     &trans  &trans    &trans

@@ -11,7 +11,7 @@ jobs:
     name: Build
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout
       - name: Cache west modules
         uses: actions/cache@v2
         env:
@@ -46,7 +46,7 @@ jobs:
       - name: Archive (Lily58 Left)
         uses: actions/upload-artifact@v4
         with:
-          name: firmware
+          name: lily58_left_nice_nano
           path: lily58_left_nice_nano.uf2
       - name: West Build (Lily58 Right)
         run: west build --pristine -s zmk/app -b nice_nano -- -DSHIELD=lily58_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/2.4"
@@ -57,5 +57,5 @@ jobs:
       - name: Archive (Lily58 Right)
         uses: actions/upload-artifact@v4
         with:
-          name: firmware
+          name: lily58_right_nice_nano
           path: lily58_right_nice_nano.uf2
